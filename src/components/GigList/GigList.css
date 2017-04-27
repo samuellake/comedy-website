@@ -1,0 +1,9 @@
+.gig-list-items{
+  display:flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.gig-list-items > .gig-item{
+  margin-bottom: 10px;
+}

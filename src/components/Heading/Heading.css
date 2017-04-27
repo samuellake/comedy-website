@@ -1,0 +1,11 @@
+.heading{
+  margin: 10px 0;
+}
+
+.heading-title{
+  font-size: 32px;
+}
+
+.heading-subtitle{
+  color: grey;
+}

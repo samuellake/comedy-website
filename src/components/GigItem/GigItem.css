@@ -1,0 +1,9 @@
+.gig-item{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  float: left;
+}
+
+.gig-item-date{
+  font-family: 'Permanent Marker', cursive;
+}
