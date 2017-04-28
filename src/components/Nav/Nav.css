@@ -1,0 +1,12 @@
+.nav{
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item{
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: grey;
+}

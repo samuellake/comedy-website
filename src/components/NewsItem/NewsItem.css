@@ -12,9 +12,11 @@
 
 .news-item-title{
   font-size: 24px;
+  width: 100%;
   border-bottom: 2px solid black;
 }
 
 .news-item-date{
   padding: 5px 2px 5px 0px;
+  color: grey;
 }

@@ -6,9 +6,10 @@ class GigItem extends Component {
     return (
       <div className="gig-item">
         <div className="gig-item-date">
-          <span className="gig-item-date-day">14</span>
-          <span className="gig-item-date-month">AUG</span>
-          <span className="gig-item-date-time">7PM</span>
+          <span className="gig-item-date-day">14
+            <span className="gig-item-date-month">AUG</span>
+          </span>
+          <div className="gig-item-date-time">7PM</div>
         </div>
         <div className="gig-item-details">
           <div className="gig-item-details-name">GIG NAME</div>
