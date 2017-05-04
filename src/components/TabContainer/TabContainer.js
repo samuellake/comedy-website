@@ -33,23 +33,12 @@ class TabContainer extends Component {
 
   renderTitles() {
     const tabs = this.props.children;
-    tabs.map((tab, index) =>{
-      return(
-        <li key={index}>
-          <a href="#"
-            className={""}
-            onClick={this.handleClick.bind(this, index)}>
-            {tab.props.label}
-          </a>
-        </li>
-      )
-    });
-
     return (
       <ul className="tabs__labels">
         {tabs.map((tab, index) =>{
+          const classes = (index === this.state.selected) ? "selected" : "";
           return(
-            <li key={index}>
+            <li key={index} className={classes}>
               <a href="#"
                 className={""}
                 onClick={this.handleClick.bind(this, index)}>

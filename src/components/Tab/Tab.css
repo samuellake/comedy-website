@@ -1,4 +1,29 @@
+li{
+  list-style-type: none;
+  width: 100%;
+  height: 25px;
+  padding-top: 13px;
+}
+
+li.selected{
+  background-color: lightslategrey;
+}
+
+li:hover{
+  color: blue;
+}
+
 li > a {
   text-decoration: none;
   color: white;
+}
+
+.tab{
+   animation: fade-in 2s infinite;
+   animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }

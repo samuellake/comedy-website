@@ -5,7 +5,11 @@
   "dependencies": {
     "googleapis": "^19.0.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "react-native": "^0.44.0",
+    "react-native-web": "0.0.94",
+    "react-transition-group": "^1.1.2"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

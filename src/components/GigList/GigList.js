@@ -8,7 +8,7 @@ class GigList extends Component {
   render() {
     return (
       <div className="gig-list">
-        <Heading />
+        <Heading title={"Gigs"} subtitle={"See where I'm performing next!"}/>
         <div className="gig-list-items">
           <GigItem />
           <GigItem />
