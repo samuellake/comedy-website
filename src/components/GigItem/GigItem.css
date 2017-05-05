@@ -1,8 +1,6 @@
 .gig-item{
-  display:flex;
   border: 1px solid #ccc;
   border-radius: 10px;
-  float: left;
 }
 
 .gig-item-date{
@@ -12,4 +10,14 @@
 }
 .gig-item-details{
   flex: 1.7;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.gig-item > a{
+  text-decoration: none;
+  color: black;
+  display: flex;
 }

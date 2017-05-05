@@ -7,6 +7,7 @@ import NewsFeed from './components/NewsFeed/NewsFeed';
 import Nav from './components/Nav/Nav';
 import TabContainer from './components/TabContainer/TabContainer';
 import Tab from './components/Tab/Tab';
+import Home from './components/Home/Home';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
         </div>
         <TabContainer selected={1}>
           <Tab label="HOME">
-            <div> ADD SOMETHING CUTE HERE </div>
+            <Home/>
           </Tab>
           <Tab label="NEWS">
             <NewsFeed/>

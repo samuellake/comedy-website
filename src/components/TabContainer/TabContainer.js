@@ -19,16 +19,20 @@ class TabContainer extends Component {
 		super(props);
 
 		this.state ={
-			selected: 0
+			selected: 0,
+      classes: "tabs"
 		};
 	}
 
   handleClick(index, event) {
     event.preventDefault();
-    console.log(index);
-    this.setState({
-      selected: index
-    });
+    if(index !== this.state.selected ){
+      this.setState({
+        classes: "tabs deselected"
+      });
+
+      setTimeout(function() { this.setState({selected: index, classes: "tabs selected"}); }.bind(this), 250);
+    }
   }
 
   renderTitles() {
@@ -53,10 +57,8 @@ class TabContainer extends Component {
   }
 
   renderContent(){
-    console.log(this.props.children[this.state.selected]);
-
     return(
-      <div className="tabs">
+      <div className={this.state.classes}>
         {this.props.children[this.state.selected]}
       </div>
     )

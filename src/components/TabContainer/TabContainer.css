@@ -2,10 +2,30 @@
   margin-top: 20px;
 }
 
+.tabs.selected{
+  animation: fade-in 0.5s infinite;
+  animation-iteration-count: 1;
+}
+
+.tabs.deselected{
+  animation: fade-out 0.5s infinite;
+  animation-iteration-count: 1;
+}
+
 .tabs__labels{
   display: flex;
   justify-content: space-around;
   background-color: #222;
   margin: 0;
   padding: 0px;
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
 }
