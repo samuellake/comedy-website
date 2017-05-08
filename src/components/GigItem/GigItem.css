@@ -4,9 +4,12 @@
 }
 
 .gig-item-date{
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Righteous', cursive;
   border-right: 1px solid grey;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 .gig-item-details{
   flex: 1.7;

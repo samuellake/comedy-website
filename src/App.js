@@ -28,6 +28,12 @@ class App extends Component {
           <Tab label="GIGS" >
             <GigList/>
           </Tab>
+          <Tab label="BIO" >
+            <GigList/>
+          </Tab>
+          <Tab label="MEDIA" >
+            <GigList/>
+          </Tab>
         </TabContainer>
       </div>
     );
