@@ -9,6 +9,7 @@
     "react-dom": "^15.5.4",
     "react-native": "^0.44.0",
     "react-native-web": "0.0.94",
+    "react-player": "^0.17.2",
     "react-transition-group": "^1.1.2"
   },
   "devDependencies": {

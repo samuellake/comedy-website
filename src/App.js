@@ -3,11 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 import GigList from './components/GigList/GigList';
+import Bio from './components/Bio/Bio';
 import NewsFeed from './components/NewsFeed/NewsFeed';
 import Nav from './components/Nav/Nav';
 import TabContainer from './components/TabContainer/TabContainer';
 import Tab from './components/Tab/Tab';
 import Home from './components/Home/Home';
+import Clips from './components/Clips/Clips';
 
 class App extends Component {
 
@@ -22,17 +24,17 @@ class App extends Component {
           <Tab label="HOME">
             <Home/>
           </Tab>
+          <Tab label="BIO" >
+            <Bio/>
+          </Tab>
           <Tab label="NEWS">
             <NewsFeed/>
           </Tab>
           <Tab label="GIGS" >
             <GigList/>
           </Tab>
-          <Tab label="BIO" >
-            <GigList/>
-          </Tab>
-          <Tab label="MEDIA" >
-            <GigList/>
+          <Tab label="CLIPS" >
+            <Clips/>
           </Tab>
         </TabContainer>
       </div>
