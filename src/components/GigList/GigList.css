@@ -2,6 +2,7 @@
   display:flex;
   flex-direction: column;
   margin-top: 20px;
+  width: 100%;
 }
 
 .gig-list-items > .gig-item{
@@ -20,13 +21,18 @@
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: fade-in 0.5s, spin 2s linear infinite;
+  width: 60px;
+  height: 60px;
+  animation: fade-in 0.5s, spin 1s linear infinite;
 }
 
 .isLoaded{
   animation: fade-out 1s, fade-in 1s;
+  animation-iteration-count: 1;
+}
+
+.isFinished{
+  animation: fade-in 1s;
   animation-iteration-count: 1;
 }
 
