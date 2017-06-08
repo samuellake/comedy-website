@@ -9,6 +9,13 @@
   margin: 10px 15px 0px 15px;
 }
 
+.gig-item{
+  animation: rise-in 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: calc(1 * 1.5);
+  color:red;
+}
+
 .gig-list-container{
   display: flex;
   align-items: center;
@@ -49,4 +56,10 @@
 @keyframes fade-out-spin {
   0%   { opacity: 1; }
   100% { opacity: 0; }
+}
+
+@keyframes rise-in {
+  0%   { margin-top: 1000px; opacity: 0; }
+  /*80%  { margin-top: 0px; opacity: 1;}*/
+  100% { margin-top: 10px; opacity: 1; }
 }

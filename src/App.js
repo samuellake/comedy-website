@@ -18,6 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
+          <img src="https://yt3.ggpht.com/-rbcC6Hd9Cck/AAAAAAAAAAI/AAAAAAAAAAA/NT0jyoaJFwA/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" />
           <h1>Sam Lake</h1>
         </div>
         <TabContainer selected={1}>

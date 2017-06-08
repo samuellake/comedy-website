@@ -1,0 +1,20 @@
+p {
+  margin: 10px 20px;
+}
+
+.features-block{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  margin: 0px 20px;
+}
+
+.feature{
+  flex: 50%;
+  max-width: 175px;
+}
+
+.feature > img{
+  width: 100%;
+  height: auto;
+}

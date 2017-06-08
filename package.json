@@ -4,14 +4,19 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "es6-promise": "^4.1.0",
     "googleapis": "^19.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
     "react-native": "^0.44.0",
     "react-native-web": "0.0.94",
     "react-player": "^0.17.2",
-    "react-transition-group": "^1.1.2"
+    "react-soundplayer": "^0.3.6",
+    "react-transition-group": "^1.1.2",
+    "react-youtube-player": "^2.0.1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5",

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import fetch from 'isomorphic-fetch';
 import './GigList.css';
 
 import GigItem from '../GigItem/GigItem';
@@ -25,34 +26,50 @@ class GigList extends Component {
                       name={event.name}
                       location={event.location}
                       description={event.description}
+                      index={index}
                       key={index}/>
     });
   }
 
   fetchEvents() {
     //dummy for loading spinner
-    const events = [
-      {date: '17AUG', name:'Gig #1', location: 'London', description: "It's a gig barbara"},
-      {date: '17AUG', name:'Gig #1', location: 'London', description: "It's a gig barbara"},
-      {date: '17AUG', name:'Gig #1', location: 'London', description: "It's a gig barbara"}
-    ];
+    const apiKey = 'AIzaSyD-vYO571FAY3B7hjNGfM7l8iCmpjDKAbU';
+    const calId = 'gcig6mtc8e2gvelm65pfcfr7vk@group.calendar.google.com';
+    const now = new Date().toISOString();
+    const url = `https://www.googleapis.com/calendar/v3/calendars/${calId}/events?key=${apiKey}&timeMin=${now}&orderBy=startTime&singleEvents=true`;
+
     this.setState({
       isLoading: true
     });
 
-    setTimeout(()=>{
-      this.setState({
-        isLoaded: true
-      });
-      setTimeout(()=>{
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((events)=> {
+        let gigs = [];
+        events.items.map((event) => {
+          gigs.push({
+            date: event.start.dateTime,
+            name: event.summary,
+            location: event.location,
+            description: ''
+          });
+        })
+        //animation
         this.setState({
-          isLoading: false,
-          isLoaded: false,
-          isFinished: true,
-          events: events
+          isLoaded: true
         });
-      }, 500);
-    }, 2000);
+        setTimeout(()=>{
+          this.setState({
+            isLoading: false,
+            isLoaded: false,
+            isFinished: true,
+            events: gigs
+          });
+        }, 500);
+        console.log(gigs);
+      });
   }
 
   componentDidMount(){
