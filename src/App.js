@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import headerProfile from '../public/images/header_profile.jpg';
 import './App.css';
 
 import GigList from './components/GigList/GigList';
@@ -11,6 +12,8 @@ import Tab from './components/Tab/Tab';
 import Home from './components/Home/Home';
 import Clips from './components/Clips/Clips';
 
+
+
 class App extends Component {
 
 
@@ -18,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src="https://yt3.ggpht.com/-rbcC6Hd9Cck/AAAAAAAAAAI/AAAAAAAAAAA/NT0jyoaJFwA/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" />
+          <img src={headerProfile} />
           <h1>Sam Lake</h1>
         </div>
         <TabContainer selected={1}>
