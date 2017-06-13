@@ -1,6 +1,12 @@
 .gig-item{
   border: 1px solid #ccc;
   border-radius: 10px;
+  color: #b9b9b9;
+  box-shadow: 5px 5px;
+}
+
+.gig-item .expanded{
+
 }
 
 .gig-item-date{
@@ -17,6 +23,16 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+}
+
+.gig-item-details-location{
+  text-align: left;
+}
+
+.gig-item-details-name{
+  text-align: left;
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .gig-item > a{

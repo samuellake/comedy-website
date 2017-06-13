@@ -14,7 +14,7 @@ class GigItem extends Component {
 
     return (
       <div className="gig-item" style={style}>
-        <a href="#">
+        <a href={description}>
           <div className="gig-item-date">
             <span className="gig-item-date-day">{dateDetails.date()}
               <span className="gig-item-date-month"> {dateDetails.format("MMM")}</span>
@@ -24,7 +24,7 @@ class GigItem extends Component {
           <div className="gig-item-details">
             <div className="gig-item-details-name">{name}</div>
             <div className="gig-item-details-location">{location ? location : "London, UK"}</div>
-            <div className="gig-item-details-description"> This is a description. </div>
+            <div className="gig-item-details-description"></div>
           </div>
         </a>
       </div>

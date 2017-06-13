@@ -22,7 +22,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={headerProfile} />
-          <h1>Sam Lake</h1>
+          <div className="nav-details">
+            <h1>Sam Lake</h1>
+            <h2> Comedian | Writer | Performer </h2>
+          </div>
         </div>
         <TabContainer selected={1}>
           <Tab label="HOME">

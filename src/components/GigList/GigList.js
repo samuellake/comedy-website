@@ -53,7 +53,7 @@ class GigList extends Component {
             date: event.start.dateTime,
             name: event.summary,
             location: event.location,
-            description: ''
+            description: event.description
           });
         })
         //animation
