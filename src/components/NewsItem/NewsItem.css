@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 25px;
+  text-align:left;
 }
 
 .news-item-image{

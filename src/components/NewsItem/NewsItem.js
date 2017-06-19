@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import './NewsItem.css';
 
 class NewsItem extends Component {
+
   render() {
+
+    const {title, date, image, body} = this.props;
+
     return (
       <div className="news-item">
         <div className="news-item-title">
-          "He's too good for NewsJack" - BBC
+          {title}
         </div>
         <div className="news-item-date">
-          28/04/17
+          {moment(date).format("DD MMM 'YY")}
         </div>
-        <img className="news-item-image" src="https://ichef.bbci.co.uk/images/ic/976x549_b/p03zbcmw.jpg"/>
-        <p> Lorem ipsum minge minge minge Lorem ipsum minge minge mingeLorem ipsum minge minge mingeLorem ipsum minge minge mingeLorem ipsum minge minge mingeLorem ipsum minge minge minge</p>
+        <img className="news-item-image" src={image}/>
+        <p>{body}</p>
       </div>
     );
   }

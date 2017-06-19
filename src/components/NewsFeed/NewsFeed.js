@@ -5,14 +5,17 @@ import Heading from '../Heading/Heading';
 import NewsItem from '../NewsItem/NewsItem';
 
 class NewsFeed extends Component {
+
   render() {
+
+    const stories = this.props.stories;
+
     return (
       <div className="news">
-        <Heading title={"News"} subtitle={"What the latest with Big S"}/>
         <div className="news-items">
-          <NewsItem />
-          <NewsItem />
-          <NewsItem />
+          {stories.map((story, index) => {
+            return <NewsItem {...story} key={index}/>
+          })}
         </div>
       </div>
     );

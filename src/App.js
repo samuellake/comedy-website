@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { SocialIcon } from 'react-social-icons';
 import logo from './logo.svg';
 import headerProfile from '../public/images/header_profile.jpg';
+import content from '../public/content.json';
 import './App.css';
 
 import GigList from './components/GigList/GigList';
@@ -16,8 +18,11 @@ import Clips from './components/Clips/Clips';
 
 class App extends Component {
 
-
   render() {
+
+    const {stories} = content;
+    const style = { height: 25, width: 25};
+
     return (
       <div className="App">
         <div className="App-header">
@@ -26,16 +31,18 @@ class App extends Component {
             <h1>Sam Lake</h1>
             <h2> Comedian | Writer | Performer </h2>
           </div>
+          <div className="social">
+            <SocialIcon url="https://www.facebook.com/JokingHazardUK" style={style} color={'white'}/>
+            <SocialIcon url="https://twitter.com/MrSamLake" style={style} color={'white'}/>
+            <SocialIcon url="https://www.youtube.com/channel/UCP4HfYDH9EKS_CdoEZk2itA" style={style} color={'white'}/>
+          </div>
         </div>
         <TabContainer selected={1}>
-          <Tab label="HOME">
+          <Tab label="ABOUT">
             <Home/>
           </Tab>
-          <Tab label="BIO" >
-            <Bio/>
-          </Tab>
           <Tab label="NEWS">
-            <NewsFeed/>
+            <NewsFeed stories={stories}/>
           </Tab>
           <Tab label="GIGS" >
             <GigList/>

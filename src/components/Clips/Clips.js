@@ -9,7 +9,6 @@ class Clips extends Component {
   render() {
     return(
       <div className="clips">
-        <Heading title="Clips" subtitle="Oh Honey, clips honey!? Yeah, I got some clips honey! Honey! Oh, Honey!" />
         <MediaPlayer /> 
       </div>
     )

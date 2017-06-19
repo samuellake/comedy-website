@@ -4,12 +4,7 @@
   animation-iteration-count: 1;
 }
 
-.social{
-  display: flex;
-  justify-content: space-around;
-  animation: rise-up 1s;
-  animation-iteration-count: 1;
-}
+
 
 img{
   width:100%;

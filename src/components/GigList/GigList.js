@@ -79,7 +79,6 @@ class GigList extends Component {
   render() {
     return (
       <div className='gig-list'>
-        <Heading title={"Gigs"} subtitle={"See where I'm performing next!"}/>
         <div className='gig-list-container'>
           <div className={classNames('gig-list-items',
                                       {isLoading: this.state.isLoading},
