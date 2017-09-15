@@ -17,7 +17,7 @@ class NewsItem extends Component {
           {moment(date).format("DD MMM 'YY")}
         </div>
         <img className="news-item-image" src={image}/>
-        <p>{body}</p>
+        <div className="news-item-body" dangerouslySetInnerHTML={{__html: body}}></div>
       </div>
     );
   }

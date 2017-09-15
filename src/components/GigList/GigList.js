@@ -11,7 +11,7 @@ class GigList extends Component {
   constructor(props) {
     super(props);
 
-    this.state ={
+    this.state = {
       events: [],
       isLoading: false,
       isLoaded: false,
@@ -23,6 +23,7 @@ class GigList extends Component {
     //date,name,location, description
     return events.map((event, index) => {
       return <GigItem date={event.date}
+                      time={event.time}
                       name={event.name}
                       location={event.location}
                       description={event.description}
@@ -33,10 +34,12 @@ class GigList extends Component {
 
   fetchEvents() {
     //dummy for loading spinner
-    const apiKey = 'AIzaSyD-vYO571FAY3B7hjNGfM7l8iCmpjDKAbU';
-    const calId = 'gcig6mtc8e2gvelm65pfcfr7vk@group.calendar.google.com';
-    const now = new Date().toISOString();
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${calId}/events?key=${apiKey}&timeMin=${now}&orderBy=startTime&singleEvents=true`;
+    // const apiKey = 'AIzaSyD-vYO571FAY3B7hjNGfM7l8iCmpjDKAbU';
+    // const calId = 'gcig6mtc8e2gvelm65pfcfr7vk@group.calendar.google.com';
+    // const now = new Date().toISOString();
+    // const url = `https://www.googleapis.com/calendar/v3/calendars/${calId}/events?key=${apiKey}&timeMin=${now}&orderBy=startTime&singleEvents=true`;
+
+    const url = "http://localhost:3000/api/events";
 
     this.setState({
       isLoading: true
@@ -47,13 +50,15 @@ class GigList extends Component {
         return response.json();
       })
       .then((events)=> {
+        console.log(events);
         let gigs = [];
-        events.items.map((event) => {
+        events.events.map((event) => {
           gigs.push({
-            date: event.start.dateTime,
-            name: event.summary,
-            location: event.location,
-            description: event.description
+            date: event.eventDate,
+            time: event.eventTime,
+            name: event.eventName,
+            location: event.eventLocation,
+            description: ''
           });
         })
         //animation

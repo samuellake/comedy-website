@@ -3,9 +3,21 @@ import moment from 'moment';
 import './GigItem.css';
 
 class GigItem extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      events: [],
+      isLoading: false,
+      isLoaded: false,
+      isFinished: false
+    };
+  }
+  
   render() {
 
-    const {date, name, location, description, index} = this.props;
+    const {date, time, name, location, description, index} = this.props;
     const dateDetails = moment(date);
 
     const style = {
@@ -19,7 +31,7 @@ class GigItem extends Component {
             <span className="gig-item-date-day">{dateDetails.date()}
               <span className="gig-item-date-month"> {dateDetails.format("MMM")}</span>
             </span>
-            <div className="gig-item-date-time">{dateDetails.format("HH:mm")}</div>
+            <div className="gig-item-date-time">{time}</div>
           </div>
           <div className="gig-item-details">
             <div className="gig-item-details-name">{name}</div>

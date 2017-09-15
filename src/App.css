@@ -24,6 +24,14 @@
   align-items: baseline;
 }
 
+.nav-details h1 {
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.nav-details h2 {
+  font-family: 'Press Start 2P', sans-serif;
+}
+
 .App-header img {
   width: 75px;
   height: auto;
@@ -41,6 +49,7 @@
 .social{
   display: flex;
   justify-content: space-around;
+  margin-left: auto;
 }
 
 .social > a{
@@ -48,7 +57,6 @@
 }
 
 h1 {
-  font-family: 'Josefin Slab', cursive;
   color: white;
   font-size: 40px;
   margin: 0;
@@ -57,6 +65,25 @@ h1 {
 h2 {
   font-size: 18px;
   margin: 0;
+}
+
+@media (max-width: 720px) {
+
+  h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  .App-header{
+    height: 30px;
+  }
+
 }
 
 @keyframes App-logo-spin {
