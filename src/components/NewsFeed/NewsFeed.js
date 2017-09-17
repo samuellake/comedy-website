@@ -26,7 +26,7 @@ class NewsFeed extends Component {
 
   fetchStories() {
 
-    const url = "http://localhost:3000/api/posts";
+    const url = `${process.env.REACT_APP_CMS_URL}/posts`;
 
     this.setState({
       isLoading: true

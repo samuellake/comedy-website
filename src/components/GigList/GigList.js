@@ -39,7 +39,7 @@ class GigList extends Component {
     // const now = new Date().toISOString();
     // const url = `https://www.googleapis.com/calendar/v3/calendars/${calId}/events?key=${apiKey}&timeMin=${now}&orderBy=startTime&singleEvents=true`;
 
-    const url = "http://localhost:3000/api/events";
+    const url = `${process.env.REACT_APP_CMS_URL}/events`;
 
     this.setState({
       isLoading: true

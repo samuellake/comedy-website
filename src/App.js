@@ -24,7 +24,7 @@ class App extends Component {
 
     const env = runtimeEnv();
     console.log("THIS IS THE ENV VARIABLES", env);
-    console.log("THIS IS THE ENV VARIABLES", process.env);
+    console.log("THIS IS THE ENV VARIABLES", process.env.REACT_APP_CMS_URL);
 
 
     const {stories} = content;
