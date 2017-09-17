@@ -13,6 +13,8 @@ import TabContainer from './components/TabContainer/TabContainer';
 import Tab from './components/Tab/Tab';
 import Home from './components/Home/Home';
 import Clips from './components/Clips/Clips';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
+
 
 
 
@@ -20,7 +22,10 @@ class App extends Component {
 
   render() {
 
-    console.log("!!!",process.env);
+    const env = runtimeEnv();
+    console.log("THIS IS THE ENV VARIABLES", env);
+    console.log("THIS IS THE ENV VARIABLES", process.env);
+
 
     const {stories} = content;
     const style = { height: 25, width: 25};
