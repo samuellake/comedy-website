@@ -20,6 +20,8 @@ class App extends Component {
 
   render() {
 
+    console.log("!!!",process.env);
+
     const {stories} = content;
     const style = { height: 25, width: 25};
 
